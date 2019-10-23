@@ -12,6 +12,7 @@
     "preset": "react-native"
   },
   "dependencies": {
+    "passport": "*",
     "@eva-design/eva": "1.0.1",
     "@fortawesome/fontawesome-svg-core": "1.2.22",
     "@fortawesome/free-solid-svg-icons": "5.10.2",
