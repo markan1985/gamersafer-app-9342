@@ -11,6 +11,7 @@ import {EmailAuthNavigator} from '../features/EmailAuth/navigator';
 import { CameraNavigator } from "../features/UserCamera/navigator";
 
 //@BlueprintImportInsertion
+import { ProfilesBlueprintNavigator } from '../features/ProfilesBlueprint/navigator';
 
 /**
  * new navigators can be imported here
@@ -53,6 +54,7 @@ const AppNavigator = createStackNavigator(
     
 
     //@BlueprintNavigationInsertion
+ProfilesBlueprint: { screen: ProfilesBlueprintNavigator },
 
     /** new navigators can be added here */
   },
