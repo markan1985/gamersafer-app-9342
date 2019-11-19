@@ -101,7 +101,7 @@ class SignupSerializer(serializers.ModelSerializer):
         )
 
         # user.dob=validated_data.get('dob')
-        # user.country=validated_data.get('country')
+         user.country=validated_data.get('country')
         # user.state=validated_data.get('state')
         # user.face_data=validated_data.get('face_data')
         # user.first_name=validated_data.get('first_name')
@@ -148,7 +148,7 @@ class UserByUserNameSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
          model = User
         # fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
-                 fields = ('id', 'name', 'email','username', 'password')
+                 fields = ('id', 'name', 'email','username', 'password','country')
 
              
                
@@ -178,7 +178,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
       #  fields = ['id', 'name', 'email','dob','country','state','face_data','first_name','last_name']
-         fields = ('id', 'name', 'email','username', 'password')
+         fields = ('id', 'name', 'email','username', 'password','country')
 
 class UserDataSerializer(serializers.ModelSerializer):
     class Meta:

@@ -11,7 +11,7 @@ class User(AbstractUser):
 
     # First Name and Last Name do not cover name patterns
     # around the globe.
-    # country = CharField(_("Country"), blank=True, null=True, max_length=255)
+    country = CharField(_("Country"), blank=True, null=True, max_length=255)
     # state = CharField(_("State"), blank=True, null=True, max_length=255)
     # dob = CharField(_("dob of User"), blank=True, null=True, max_length=255)
     # face_data = CharField(_("face data of User"), blank=True, null=True, max_length=255)
