@@ -59,8 +59,8 @@ class SignupVerifySerializer(serializers.ModelSerializer):
 class SignupSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-         fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
-         #       fields = ('id', 'name', 'email','username', 'password')
+        fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
+        #fields = ('id', 'name', 'email','username', 'password')
 
         extra_kwargs = {
             'password': {
@@ -131,24 +131,24 @@ class PreferencesSerializer(serializers.ModelSerializer):
         fields = ('interaction', 'streaming', 'playstyle', 'usagepattern', 'userid')
 
     def create(self, validated_data):
-            preferences = Preferences()
+        preferences = Preferences()
 
-            preferences.interaction=validated_data.get('interaction')
-            preferences.streaming=validated_data.get('streaming')
-            preferences.playstyle=validated_data.get('playstyle')
-            preferences.usagepattern=validated_data.get('usagepattern')
-            preferences.userid=validated_data.get('userid')
-            preferences.save()
-            request = self._get_request()
-            return user
+        preferences.interaction=validated_data.get('interaction')
+        preferences.streaming=validated_data.get('streaming')
+        preferences.playstyle=validated_data.get('playstyle')
+        preferences.usagepattern=validated_data.get('usagepattern')
+        preferences.userid=validated_data.get('userid')
+        preferences.save()
+        request = self._get_request()
+        return user
  
          
  
 class UserByUserNameSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
          model = User
-        fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
-         #         fields = ('id', 'name', 'email','username', 'password')
+         fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
+         #fields = ('id', 'name', 'email','username', 'password')
 
              
                
