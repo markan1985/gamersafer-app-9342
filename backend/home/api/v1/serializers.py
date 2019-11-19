@@ -21,8 +21,8 @@ User = get_user_model()
 class SignupVerifySerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-       # fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
-       fields = ('id', 'name', 'email','username', 'password')
+       fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
+       # fields = ('id', 'name', 'email','username', 'password')
         extra_kwargs = {
             'password': {
                 'write_only': True,
@@ -59,8 +59,8 @@ class SignupVerifySerializer(serializers.ModelSerializer):
 class SignupSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        #fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
-                fields = ('id', 'name', 'email','username', 'password')
+         fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
+         #       fields = ('id', 'name', 'email','username', 'password')
 
         extra_kwargs = {
             'password': {
@@ -100,12 +100,12 @@ class SignupSerializer(serializers.ModelSerializer):
             ])
         )
 
-        # user.dob=validated_data.get('dob')
-         user.country=validated_data.get('country')
-        # user.state=validated_data.get('state')
-        # user.face_data=validated_data.get('face_data')
-        # user.first_name=validated_data.get('first_name')
-        # user.last_name=validated_data.get('last_name')
+        user.dob=validated_data.get('dob')
+        user.country=validated_data.get('country')
+        user.state=validated_data.get('state')
+        user.face_data=validated_data.get('face_data')
+        user.first_name=validated_data.get('first_name')
+        user.last_name=validated_data.get('last_name')
 
 
 
@@ -147,8 +147,8 @@ class PreferencesSerializer(serializers.ModelSerializer):
 class UserByUserNameSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
          model = User
-        # fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
-                 fields = ('id', 'name', 'email','username', 'password','country')
+        fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
+         #         fields = ('id', 'name', 'email','username', 'password')
 
              
                
@@ -177,8 +177,8 @@ class HomePageSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-      #  fields = ['id', 'name', 'email','dob','country','state','face_data','first_name','last_name']
-         fields = ('id', 'name', 'email','username', 'password','country')
+       fields = ['id', 'name', 'email','dob','country','state','face_data','first_name','last_name']
+       #   fields = ('id', 'name', 'email','username', 'password')
 
 class UserDataSerializer(serializers.ModelSerializer):
     class Meta:
