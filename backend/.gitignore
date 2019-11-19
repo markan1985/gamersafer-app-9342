@@ -1,5 +1,4 @@
 *.pyc
 env/
 .terraform
-.env
 staticfiles/
