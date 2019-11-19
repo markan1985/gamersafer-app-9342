@@ -105,16 +105,15 @@ WSGI_APPLICATION = 'gamersafer_app_9342.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-'default': {
-'ENGINE': 'django.db.backends.postgresql_psycopg2',
-'NAME': 'gamer2',
-'USER': 'postgres',
-'PASSWORD': 'Deep##123',
-'HOST': 'localhost',
-'PORT': '5432',
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'gamer1',
+        'USER': 'postgres',
+        'PASSWORD': 'Deep##123',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
