@@ -21,7 +21,7 @@ User = get_user_model()
 class SignupVerifySerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name','face_id')
+        fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
         extra_kwargs = {
             'password': {
                 'write_only': True,
@@ -58,7 +58,7 @@ class SignupVerifySerializer(serializers.ModelSerializer):
 class SignupSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name','face_id')
+        fields = ('id', 'name', 'email','username', 'password','dob','country','state','face_data','first_name','last_name')
         extra_kwargs = {
             'password': {
                 'write_only': True,
@@ -103,7 +103,6 @@ class SignupSerializer(serializers.ModelSerializer):
         user.face_data=validated_data.get('face_data')
         user.first_name=validated_data.get('first_name')
         user.last_name=validated_data.get('last_name')
-        user.face_id=validated_data.get('face_id')
 
 
 
