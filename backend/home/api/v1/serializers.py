@@ -176,14 +176,13 @@ class HomePageSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-       fields = ['id', 'name', 'email','dob','country','state','face_data','first_name','last_name']
-       #   fields = ('id', 'name', 'email','username', 'password')
+         model = User
+         fields = ['id', 'name', 'email','dob','country','state','face_data','first_name','last_name']
 
 class UserDataSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ['username']
+         model = User
+         fields = ['username']
 
 
 class PasswordSerializer(PasswordResetSerializer):
