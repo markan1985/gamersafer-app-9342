@@ -105,15 +105,16 @@ WSGI_APPLICATION = 'gamersafer_app_9342.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-'default': {
-'ENGINE': 'django.db.backends.postgresql_psycopg2',
-'NAME': 'gamer2',
-'USER': 'postgres',
-'PASSWORD': 'Deep##123',
-'HOST': 'localhost',
-'PORT': '5432',
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
-}
+
+if env.str("DATABASE_URL", default=None):
+    DATABASES = {
+        'default': env.db()
+    }
 
 
 # Password validation
